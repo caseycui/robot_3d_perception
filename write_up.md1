@@ -1,37 +1,30 @@
-## Project: Kinematics Pick & Place
+## Project: 3D Perception
 
 ---
 
-**Steps to complete the project:**  
-
-1. Set up your ROS Workspace.
-2. Download or clone the [project repository](https://github.com/udacity/RoboND-Kinematics-Project) into the ***src*** directory of your ROS Workspace.  
-3. Experiment with the forward_kinematics environment and get familiar with the robot.
-4. Launch in [demo mode](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/ae64bb91-e8c4-44c9-adbe-798e8f688193).
-5. Perform Kinematic Analysis for the robot following the [project rubric](https://review.udacity.com/#!/rubrics/972/view).
-6. Fill in the `IK_server.py` with your Inverse Kinematics code. 
 
 
 [//]: # (Image References)
 
-[image1]: ./imgs/DH_frames.PNG
-[image2]: ./imgs/kr210_urdf.PNG
-[image3]: ./imgs/homotransform.jpg
-[image4]: ./imgs/Ta_b.PNG
-[image5]: ./imgs/T0_g.PNG
-[image6]: ./imgs/threeD_view_theta.jpg
-[image7]: ./imgs/Euler_angles.PNG
-[image8]: ./imgs/pick_n_place.PNG
+[image1]: ./imgs/test_world1_obj.PNG
+[image2]: ./imgs/train_cnt1.PNG
+[image3]: ./imgs/train_prob1.jpg
+[image4]: ./imgs/test_world2_obj.PNG
+[image5]: ./imgs/train_cnt2.PNG
+[image6]: ./imgs/train_prob2.jpg
+[image7]: ./imgs/test_world3_obj.PNG
+[image8]: ./imgs/train_cnt3.PNG
+[image9]: ./imgs/train_prob3.jpg
 
 
 
-## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
+## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. The project repository contains a template writeup for this project that you can use as a guide and a starting point.  
 
 You're reading it!
 
