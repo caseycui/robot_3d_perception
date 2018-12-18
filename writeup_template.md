@@ -4,6 +4,19 @@
 ---
 
 
+[//]: # (Image References)
+
+[image1]: ./imgs/test_world1_obj.PNG
+[image2]: ./imgs/train_cnt1.PNG
+[image3]: ./imgs/train_prob1.jpg
+[image4]: ./imgs/test_world2_obj.PNG
+[image5]: ./imgs/train_cnt2.PNG
+[image6]: ./imgs/train_prob2.jpg
+[image7]: ./imgs/test_world3_obj.PNG
+[image8]: ./imgs/train_cnt3.PNG
+[image9]: ./imgs/train_prob3.jpg
+
+
 # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.
@@ -42,7 +55,7 @@ You're reading it!
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 Here is an example of how to include an image in your writeup.
 
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+![demo-1]image1
 
 ### Pick and Place Setup
 
