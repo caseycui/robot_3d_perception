@@ -55,7 +55,7 @@ You're reading it!
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 Here is an example of how to include an image in your writeup.
 
-![demo-1]image1
+![demo-1][image1]
 
 ### Pick and Place Setup
 
