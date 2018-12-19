@@ -71,18 +71,21 @@ For world3, I had to use 45 feature captions to train the SVM, resulting in a 10
 ### Results
 #### World 1 object detection 
 ![demo-1][image1]
-World 1 object SVM training result 
+World 1 object SVM training confusion matrix 
 ![svm-1][image2]
+World 1 object SVM training confusion probability 
 ![svmp-1][image3]
 #### World 2 object detection
 ![demo-2][image4]
-World 2 object SVM training result 
+World 2 object SVM training confusion matrix 
 ![svm-2][image5]
+World 2 object SVM training confusion probability 
 ![svmp-2][image6]
 #### World 3 object detection
 ![demo-3][image7]
-World 3 object SVM training result 
+World 3 object SVM training confusion matrix
 ![svm-3][image8]
+World 3 object SVM training confusion probability 
 ![svmp-3][image9]
 
 ### Observations & Takeaways
