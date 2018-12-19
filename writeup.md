@@ -73,17 +73,17 @@ For world3, I had to use 45 feature captions to train the SVM, resulting in a 10
 ![demo-1][image1]
 World 1 object SVM training result 
 ![svm-1][image2]
-![svm-1][image3]
+![svm-1p][image3]
 #### World 2 object detection
 ![demo-2][image4]
 World 2 object SVM training result 
 ![svm-2][image5]
-![svm-2][image6]
+![svm-2p][image6]
 #### World 3 object detection
 ![demo-3][image7]
 World 3 object SVM training result 
 ![svm-3][image8]
-![svm-3][image9]
+![svm-3p][image9]
 
 ### Observations & Takeaways
 1. Sometimes, the SVM train data can be 'remembered' in the environment and can deteriorate the detection. For example, after running several trains and perceptions, the object detection got messed up and detects everything as 'soap2' or 'biscuits'. The solution to this is to close all terminal, even restart VM, to start a fresh training, and the data will be normal again. For this reason, I saved the training_set.sav and model.sav with each world that I trained. Also, the capture_features.py is saved with each world since they vary slightly.
