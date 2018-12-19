@@ -56,7 +56,7 @@ def pcl_callback(pcl_msg):
 
     # TODO: Statistical Outlier Filtering
     outlier_filter = pcl_data.make_statistical_outlier_filter()
-    outlier_filter.set_mean_k(2) #5 for world 3 
+    outlier_filter.set_mean_k(3) #5 for world 3 
     x = 0.1 
     outlier_filter.set_std_dev_mul_thresh(x)
     cloud_filtered = outlier_filter.filter()
@@ -87,8 +87,8 @@ def pcl_callback(pcl_msg):
     passthrough = cloud_filtered.make_passthrough_filter()
     filter_axis = 'x'
     passthrough.set_filter_field_name(filter_axis)
-    xaxis_min = 0.4#0.35
-    xaxis_max = 0.8#1.0 
+    xaxis_min = 0.35
+    xaxis_max = 1.0 
     passthrough.set_filter_limits(xaxis_min,xaxis_max)
     cloud_filtered = passthrough.filter()
     # Testing only
