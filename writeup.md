@@ -8,13 +8,13 @@
 
 [image1]: ./imgs/test_world1_obj.PNG
 [image2]: ./imgs/train_cnt1.PNG
-[image3]: ./imgs/train_prob1.jpg
+[image3]: ./imgs/train_prob1.PNG
 [image4]: ./imgs/test_world2_obj.PNG
 [image5]: ./imgs/train_cnt2.PNG
-[image6]: ./imgs/train_prob2.jpg
+[image6]: ./imgs/train_prob2.PNG
 [image7]: ./imgs/test_world3_obj.PNG
 [image8]: ./imgs/train_cnt3.PNG
-[image9]: ./imgs/train_prob3.jpg
+[image9]: ./imgs/train_prob3.PNG
 
 
 # Required Steps for a Passing Submission:
@@ -73,19 +73,16 @@ For world3, I had to use 45 feature captions to train the SVM, resulting in a 10
 ![demo-1][image1]
 World 1 object SVM training confusion matrix 
 ![svm-1][image2]
-World 1 object SVM training confusion probability 
 ![svmp-1][image3]
 #### World 2 object detection
 ![demo-2][image4]
 World 2 object SVM training confusion matrix 
 ![svm-2][image5]
-World 2 object SVM training confusion probability 
 ![svmp-2][image6]
 #### World 3 object detection
 ![demo-3][image7]
 World 3 object SVM training confusion matrix
 ![svm-3][image8]
-World 3 object SVM training confusion probability 
 ![svmp-3][image9]
 
 ### Observations & Takeaways
