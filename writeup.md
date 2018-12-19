@@ -50,6 +50,8 @@ You're reading it!
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 Refer to the code section in project_template.py.
+The output*.yaml files are inside the world* directory.
+
 First of all, the camera point cloud data we get contains noise.
 The first pipeline in the image filtering is the statistical outlier filter.
 To minimize the point cloud noise, I have used an outlier filter of mean(3) and standard deviation(0.1) for world 1&2, and mean(5) for world3. The rule of thumb for tweaking mean and std dev is that, the outlier noise points are further away from information points. After some trial-and-error, I settle at the forementioned mean and dev. Now, the filtered cloud looks much less noisy -- in fact, very clear and improves the overall performance instantly.
