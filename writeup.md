@@ -49,21 +49,56 @@ You're reading it!
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
+Refer to the code section in project_template.py.
+First of all, the camera point cloud data we get contains noise.
+The first pipeline in the image filtering is the statistical outlier filter.
+To minimize the point cloud noise, I have used an outlier filter of mean(3) and standard deviation(0.1) for world 1&2, and mean(5) for world3. The rule of thumb for tweaking mean and std dev is that, the outlier noise points are further away from information points. After some trial-and-error, I settle at the forementioned mean and dev. Now, the filtered cloud looks much less noisy -- in fact, very clear and improves the overall performance instantly.
+
+The downsampling is fairly straight-forward with a voxel size of 0.01 (meter).
+
+I then used passthrough filter to filter out the areas outside of our interest. Specially, I applied passthrough filter about z, y, and x axis to only leave the table and objects in the scene (filtering out the bins using y axis, and shadows and desk rims using x axis) 
+
+After the above steps, I applied RANSAC plane segmentation to extract the desktop, and objects, respectively.
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
+Next up, is the segmentation of objects using KD-tree. The previously tuned parameters (in Exercises1-3) for min/max cluster size and tolerance work effectively in this project.
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
+After obtaining the object clusters, we load our previously trained SVM model to do object detection.
+For world1&2, 15-20 feature captions are needed for each object to achieve a 100% detection rate.
+For world3, I had to use 45 feature captions to train the SVM, resulting in a 100% detection rate. The reason is that we have more objects, and some objects are blocked and have very limited view.
 
+### Results
+#### World 1 object detection 
 ![demo-1][image1]
+World 1 object SVM training result 
+[image2]
+[image3]
+#### World 2 object detection
+![demo-2][image4]
+World 2 object SVM training result 
+[image5]
+[image6]
+#### World 3 object detection
+![demo-3][image7]
+World 3 object SVM training result 
+[image8]
+[image9]
+
+### Observations & Takeaways
+1. Sometimes, the SVM train data can be 'remembered' in the environment and can deteriorate the detection. For example, after running several trains and perceptions, the object detection got messed up and detects everything as 'soap2' or 'biscuits'. The solution to this is to close all terminal, even restart VM, to start a fresh training, and the data will be normal again. For this reason, I saved the training_set.sav and model.sav with each world that I trained. Also, the capture_features.py is saved with each world since they vary slightly.
+2. The statistical outlier filter is a huge performance boost. Once I was able to get most the noise out, the detection becomes really easy. I hardly need to tune any filter paramters following the passthrough filter.
+3. The SVM normalized confusion matrix may not be an accurate indicator of how well the model can do, especially for world3, since many objects are blocked and only a small patch of view is available.
+4. I was able to achieve a good detection rate with simply adding more feature scans of each object for this project. In Exercise 3, I have tried to use a different SVM hyperplane but the results are not good. I have also tried increasing the bin size from 32 to 64, but it has made the results worse.
+
+### Improvements & Future work
+Since only a front view is available to the camera, one thing that can be improved is to capture more of the front view features of objects. Another way is to have more camera views such as when the robot moves to scan the collision map. However, as the objects got picked, this problem should alleviate.
 
 ### Pick and Place Setup
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
-
+Due to time constraints, I've yet to get to the pick and place part, so, I'll play offline and update when I can!
 Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
 
 
